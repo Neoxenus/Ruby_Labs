@@ -1,4 +1,3 @@
-# var 9
 def area (dots)
   s = 0
   (0...dots.length - 1).each { |i|
