@@ -7,15 +7,19 @@ def area (dots)
   s += (dots[dots.length - 1][0] + dots[0][0]) * (dots[dots.length - 1][1] - dots[0][1])
   s.abs / 2
 end
+
 def range (p, t, r)
   ((p ** r) * (1 - p **  (-t))).round
 end
+
 def bin_to_dex(bin)
   bin.to_s(10)
 end
+
 def dex_to_bin(dex)
   dex.to_s(2)
 end
+
 dots = [[414,42], [274,45], [190,34], [132,21], [72,54],
         [56,107], [42,152], [60,221], [108,252], [156,285],
         [204,307], [247,304], [296,303], [359,304], [403,303],
