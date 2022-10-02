@@ -7,7 +7,7 @@ def func(i)
 end
 def sum(n = 0)
   sum = 0.0
-  if n == 0
+  if n <= 0
     i = 0.0
     loop do
       sum += func(i)
