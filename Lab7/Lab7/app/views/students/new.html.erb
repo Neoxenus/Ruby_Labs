@@ -21,8 +21,10 @@
     <%= f.number_field :experience, min: 0 %>
   </p>
   <p>
-    language id<br>
-    <%= f.number_field :language_id %>
+    language<br>
+    <%= f.select :language_id, Language.all.collect { |p| [ p.language_name, p.id ] }, include_blank: true %>
+    <%#= f.select :person_id, Person.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+    <%#= f.number_field :language_id %>
   </p>
   <%= f.submit "Add new student" %>
 <% end %>

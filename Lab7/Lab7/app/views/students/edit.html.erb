@@ -21,8 +21,9 @@
     <%= f.number_field :experience, min: 0 %>
   </p>
   <p>
-    language id<br>
-    <%= f.number_field :language_id %>
+    language<br>
+    <%= f.select :language_id, Language.all.collect { |p| [ p.language_name, p.id ] } %>
+    <%#= f.number_field :language_id %>
   </p>
   <%= f.submit "Edit student" %>
 <% end %>

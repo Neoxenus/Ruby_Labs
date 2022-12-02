@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
     if @student.update(student_params)
       redirect_to @student
     else
-      redirect_to :edit
+      redirect_to edit_student_url
     end
   end
   def destroy
@@ -30,7 +30,7 @@ class StudentsController < ApplicationController
     if @student.save
       redirect_to @student
     else
-      redirect_to :new
+      redirect_to new_student_url
     end
   end
   private
