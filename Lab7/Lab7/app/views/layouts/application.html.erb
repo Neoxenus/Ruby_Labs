@@ -13,19 +13,29 @@
 
 <body>
 <nav class="navbar navbar-expand-lg">
-  <ul class="navbar-nav">
-    <li class="active">
-      <a href="/students" class="nav-link">List</a>
-      <!--<dev class="nav-link">
-            <%#= link_to "List", students_path %>
-          </dev>-->
+  <ul class="navbar-nav align-items-center">
+    <li class="nav-item active">
+      <%= link_to t('list'), students_path, :class => 'nav-link' %>
     </li>
     <li class="nav-item">
-      <a href="/students/new" class="nav-link">Registration</a>
+      <%= link_to t('registration'), new_student_path, :class => 'nav-link'%>
     </li>
-
     <li class="nav-item">
-      <a href="#" class="nav-link">Contact Us</a>
+      <%= link_to t('first_query'), pages_first_path, :class => 'nav-link'%>
+    </li>
+    <li class="nav-item">
+      <%= link_to t('second_query'), pages_second_path, :class => 'nav-link'%>
+    </li>
+    <li class="nav-item">
+      <%= link_to t('third_query'), pages_third_path, :class => 'nav-link'%>
+    </li>
+    <li class="nav-item align-items-center">
+      <%= link_to t('fourth_query'), pages_fourth_path, :class => 'nav-link'%>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'English', root_path(locale: :en), :class => 'nav-link' %>
+      <hr>
+      <%= link_to 'Українська', root_path(locale: :ua), :class => 'nav-link' %>
     </li>
   </ul>
 </nav>

@@ -1,0 +1,33 @@
+<h3><%= t('second_query_text')%></h3>
+<hr>
+
+<ul class="row">
+  <div class="col-9 row">
+    <div class="col-4">
+      <%= t('name') %>
+    </div>
+    <div class="col-4">
+      <%= t('experience') %>
+    </div>
+    <div class="col-4">
+      <%= t('school') %>
+    </div>
+  </div>
+</ul>
+<hr>
+
+<% @result.each do |s| %>
+  <ul class="row">
+    <div class="col-9 row">
+      <div class="col-4">
+        <%= s.name %>
+      </div>
+      <div class="col-4">
+        <%= s.experience %>
+      </div>
+      <div class="col-4">
+        <%= s.school %>
+      </div>
+    </div>
+  </ul>
+<% end %>

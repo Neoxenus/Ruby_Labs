@@ -1,30 +1,32 @@
-<h1>Registration</h1>
+<h1> <%= t('registration') %></h1>
+<hr>
+
 <%= form_for :student, url: students_path do |f| %>
   <p>
-    Name<br>
+    <%= t('name') %><br>
     <%= f.text_field :name %>
   </p>
   <p>
-    School<br>
+    <%= t('school') %><br>
     <%= f.text_field :school %>
   </p>
   <p>
-    is_need_dorm<br>
+    <%= t('is_need_dorm') %><br>
     <%= f.check_box(:is_need_dorm, {}, "Yes", "No") %>
   </p>
   <p>
-    is_teacher<br>
+    <%= t('is_teacher') %><br>
     <%= f.check_box(:is_teacher, {}, "Yes", "No") %>
   </p>
   <p>
-    Experience<br>
+    <%= t('experience') %><br>
     <%= f.number_field :experience, min: 0 %>
   </p>
   <p>
-    language<br>
+    <%= t('language')%>:<br>
     <%= f.select :language_id, Language.all.collect { |p| [ p.language_name, p.id ] }, include_blank: true %>
     <%#= f.select :person_id, Person.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
     <%#= f.number_field :language_id %>
   </p>
-  <%= f.submit "Add new student" %>
+  <%= f.submit t('add_new_student') %>
 <% end %>

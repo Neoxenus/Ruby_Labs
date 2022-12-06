@@ -1,0 +1,36 @@
+<h3><%= t('fourth_query_text') %></h3>
+<hr>
+  <ul class="row ">
+    <div class="col-3">
+      <%=t('language') %>
+    </div>
+    <div class="col-3">
+      <%= t('name') %>
+    </div>
+    <div class="col-3">
+      <%= t('experience') %>
+    </div>
+    <div class="col-3">
+      <%= t('school') %>
+    </div>
+  </ul>
+<hr>
+<% @result.each do |key, value|%>
+    <%value.each do |s|%>
+      <ul class="row">
+        <div class="col-3">
+          <%= key.language_name %>
+        </div>
+        <div class="col-3">
+          <%= s.name %>
+        </div>
+        <div class="col-3">
+          <%= s.experience %>
+        </div>
+        <div class="col-3">
+          <%= s.school %>
+        </div>
+      </ul>
+    <%end %>
+  <hr>
+<% end %>
