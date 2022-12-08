@@ -83,6 +83,9 @@ test:
 #
 production:
   <<: *default
-  database: Lab7_production
-  username: Lab7
-  password: <%= ENV["LAB7_DATABASE_PASSWORD"] %>
+  database: testROR
+  username: postgres
+  password: 1111
+#  database: Lab7_production
+#  username: Lab7
+#  password: <%#= ENV["LAB7_DATABASE_PASSWORD"] %>
